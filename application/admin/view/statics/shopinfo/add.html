@@ -1,0 +1,214 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">商户编号</label>
+        <div class="col-xs-12 col-sm-8">
+            <input data-rule="required" id="c-c_partner_code" class="form-control" name="row[c_partner_code]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">商户名称</label>
+        <div class="col-xs-12 col-sm-8">
+            <input data-rule="required" id="c-c_merchant_name" class="form-control" name="row[c_merchant_name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">商户简称</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_short_name" class="form-control" name="row[c_short_name]" type="text" value="">
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">手机号</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_tel" class="form-control" name="row[c_tel]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">客服电话</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_service_phone" class="form-control" name="row[c_service_phone]" type="text" value="">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">账号类型</label>
+        <div class="col-xs-12 col-sm-8">
+            <select  class="form-control"  id="c_account_type" data-rule="required" name="row[c_account_type]" type="text"  >
+                <option value="0">个人账号</option>
+                <option value="1">公司账号</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">开户人姓名</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_name" class="form-control" name="row[c_name]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">开户银行</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_bank" class="form-control" name="row[c_bank]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">银行账号</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_bank_code" class="form-control" name="row[c_bank_code]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">申请反馈邮箱</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_feedback_email" class="form-control" name="row[c_feedback_email]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">支付宝账号</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_alipay_no" class="form-control" name="row[c_alipay_no]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">法人身份证号</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-c_id_card_no" class="form-control" name="row[c_id_card_no]" type="text" value="">
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label for="c-c_id_card_img_f" class="control-label col-xs-12 col-sm-2">身份证正面</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_id_card_img_f" data-rule="" class="form-control" size="100" name="row[c_id_card_img_f]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_id_card_img_f" class="btn btn-danger plupload" data-input-id="c-c_id_card_img_f" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_id_card_img_f"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_id_card_img_f" class="btn btn-primary fachoose" data-input-id="c-c_id_card_img_f" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-c_id_card_img_f"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-c_id_card_img_f"></ul>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="c-c_id_card_b_img" class="control-label col-xs-12 col-sm-2">身份证背面</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_id_card_b_img" data-rule="" class="form-control" size="100" name="row[c_id_card_b_img]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_id_card_b_img" class="btn btn-danger plupload" data-input-id="c-c_id_card_b_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_id_card_b_img"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_id_card_b_img" class="btn btn-primary fachoose" data-input-id="c-c_id_card_b_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-avatar"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-c_id_card_b_img"></ul>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="c-c_license_img" class="control-label col-xs-12 col-sm-2">营业执照照片</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_license_img" data-rule="" class="form-control" size="100" name="row[c_license_img]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_license_img" class="btn btn-danger plupload" data-input-id="c-c_license_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_license_img"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_license_img" class="btn btn-primary fachoose" data-input-id="c-c_license_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-c_license_img"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-c_license_img"></ul>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-c_store_quanjing_img" class="control-label col-xs-12 col-sm-2">店内全景图</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_store_quanjing_img" data-rule="" class="form-control" size="100" name="row[c_store_quanjing_img]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_store_quanjing_img" class="btn btn-danger plupload" data-input-id="c-c_store_quanjing_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_store_quanjing_img"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_store_quanjing_img" class="btn btn-primary fachoose" data-input-id="c-c_store_quanjing_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-avatar"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-c_store_quanjing_img"></ul>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-c_store_shouyintai_img" class="control-label col-xs-12 col-sm-2">收银台照片</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_store_shouyintai_img" data-rule="" class="form-control" size="100" name="row[c_store_shouyintai_img]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_store_shouyintai_img" class="btn btn-danger plupload" data-input-id="c-c_store_shouyintai_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_store_shouyintai_img"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_store_shouyintai_img" class="btn btn-primary fachoose" data-input-id="c-c_store_shouyintai_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-c_store_shouyintai_img"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-c_store_shouyintai_img"></ul>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-c_store_zhaopai_img" class="control-label col-xs-12 col-sm-2">店铺招牌照片</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_store_zhaopai_img" data-rule="" class="form-control" size="100" name="row[c_store_zhaopai_img]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_store_zhaopai_img" class="btn btn-danger plupload" data-input-id="c-c_store_zhaopai_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_store_zhaopai_img"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_store_zhaopai_img" class="btn btn-primary fachoose" data-input-id="c-c_store_zhaopai_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-avatar"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-c_store_zhaopai_img"></ul>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="c-c_service_permit_img" class="control-label col-xs-12 col-sm-2">餐饮服务许可证</label>
+        <div class="col-xs-12 col-sm-8" >
+            <div class="input-group">
+                <input  id="c-c_service_permit_img" data-rule="" class="form-control" size="100" name="row[c_service_permit_img]" type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-c_service_permit_img" class="btn btn-danger plupload" data-input-id="c-c_service_permit_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-c_service_permit_img"><i class="fa fa-upload"></i> 上传</button></span>
+                    <span><button type="button" id="fachoose-c_service_permit_img" class="btn btn-primary fachoose" data-input-id="c-c_service_permit_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> 选择</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-avatar"></span>
+            </div>
+            <ul   class="row list-inline plupload-preview" id="p-avatar"></ul>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

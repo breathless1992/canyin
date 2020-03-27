@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="{$config.language}">
+    <head>
+        {include file="common/meta" /}
+        <style>
+            #preview-img{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 99999;
+                background-color: rgba(0,0,0,0.6);
+            }
+
+            #preview-img #img-wrapper{
+                position: absolute;
+                top: 5%;
+                left: 10%;
+                right: 10%;
+                bottom: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+            }
+
+            #preview-img #img-wrapper img{
+                width: 80%;
+                height: 80%;
+                object-fit: contain;
+            }
+
+            #preview-img .close-btn{
+                position: fixed;
+                top: -64px;
+                right: -64px;
+                padding-top: 64px;
+                padding-right: 64px;
+                box-sizing: border-box;
+                background-color: white;
+                width: 128px;
+                height:128px;
+                border-bottom-left-radius: 50%;
+            }
+
+            .close-btn .icon{
+                position: fixed;
+                right: 8px;
+                top: 8px;
+                width: 32px;
+                height: 32px;
+            }
+        </style>
+    </head>
+
+    <body class="inside-header inside-aside {:defined('IS_DIALOG') && IS_DIALOG ? 'is-dialog' : ''}">
+        <div id="main" role="main">
+            <div class="tab-content tab-addtabs">
+                <div id="content">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <section class="content-header hide">
+                                <h1>
+                                    {:__('Dashboard')}
+                                    <small>{:__('Control panel')}</small>
+                                </h1>
+                            </section>
+                            {if !IS_DIALOG && !$Think.config.fastadmin.multiplenav}
+                            <!-- RIBBON -->
+                            <div id="ribbon">
+<!--                                <ol class="breadcrumb pull-left">-->
+<!--                                    <li><a href="dashboard" class="addtabsit"><i class="fa fa-dashboard"></i> {:__('Dashboard')}</a></li>-->
+<!--                                </ol>-->
+                                <ol class="breadcrumb pull-right">
+                                    {foreach $breadcrumb as $vo}
+                                    <li><a href="javascript:;" data-url="{$vo.url}">{$vo.title}</a></li>
+                                    {/foreach}
+                                </ol>
+                            </div>
+                            <!-- END RIBBON -->
+                            {/if}
+                            <div class="content">
+                                {__CONTENT__}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--图片预览-->
+        <div id="preview-img" style="display: none;">
+            <div id="img-wrapper">
+                <img id="img-preview" src=""/>
+            </div>
+            <div class="close-btn" onclick="closePreview()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" width="64" height="64" t="1585127807595" p-id="508" version="1.1"><path fill="#000000" d="M 510.331 403.039 l 375.467 -375.467 a 75.6622 75.6622 0 0 1 107.255 0 a 75.7001 75.7001 0 0 1 0 107.33 l -375.467 375.429 l 375.467 375.467 c 29.5822 29.5822 29.8098 77.4068 0 107.255 a 75.7001 75.7001 0 0 1 -107.255 0 l -375.467 -375.467 l -375.467 375.467 c -29.5822 29.5822 -77.4447 29.8098 -107.255 0 a 75.7001 75.7001 0 0 1 0 -107.255 l 375.467 -375.467 l -375.467 -375.467 a 75.6622 75.6622 0 0 1 0 -107.255 a 75.7001 75.7001 0 0 1 107.255 0 l 375.467 375.467 Z" p-id="509" /></svg>
+            </div>
+        </div>
+        {include file="common/script" /}
+        <script>
+            function closePreview(){
+                console.log($("#preview-img"));
+                $("#preview-img").css("display","none");
+                $("#img-preview").attr("src",null);
+            }
+
+            function showPreviewImg(url){
+                $("#preview-img").css("display","block");
+                $("#img-preview").attr("src",url);
+            }
+        </script>
+    </body>
+</html>
